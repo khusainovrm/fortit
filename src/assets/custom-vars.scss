@@ -1,0 +1,28 @@
+$sideBarColor: #232d36;
+$whiteText: white;
+$blueCard: #7fa9f7;
+$blueSpecialButton: #6672fa;
+$current: #f7b64e;
+$next: #6672fa;
+$done: #e0e0e0;
+$grey: #e9e9e9;
+$ligthGrey: #e9e9e952;
+
+
+
+// This table defines the theme colors (variant names)
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'sideBarColor': $sideBarColor,
+    'whiteText': $whiteText,
+    'blueCard': $blueCard,
+    'blueSpecialButton': $blueSpecialButton,
+    'current': $current,
+    'next': $next,
+    'done': $done,
+    'grey': $grey,
+    'ligthGrey': $ligthGrey
+  ),
+  $theme-colors
+);
