@@ -26,7 +26,7 @@
       <li class="list-group-item border-0 bg-sideBarColor text-light menu">
         <b-icon icon="people" class="mr-3"></b-icon>
         Продажи
-      <span class="badge badge-whiteText badge-pill offset-4">6</span>
+      <span class="badge badge-whiteText badge-pill offset-2">6</span>
       </li>
       <li class="list-group-item border-0 bg-sideBarColor text-light menu">
         <b-icon icon="handbag" class="mr-3"></b-icon>
