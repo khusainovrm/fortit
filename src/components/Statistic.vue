@@ -5,7 +5,7 @@
       <div class="card mb-3 bg-blueCard text-whiteText" style="width: 12rem; height: 12rem;">
         <div class="card-body d-flex flex-column justify-content-center">
           <h4 class="card-title">Заказы</h4>
-          <h1 class="card-title">{{statistics.orders | number }}</h1>
+          <h1 class="card-title">1.7K</h1>
           <p class="card-text">Подробнее</p>
         </div>
       </div>
@@ -14,7 +14,7 @@
       <div class="card mb-3 bg-blueCard text-whiteText" style="width: 12rem; height: 12rem;">
         <div class="card-body d-flex flex-column justify-content-center">
           <h4 class="card-title">Распродажа</h4>
-          <h1 class="card-title">{{statistics.sale | number }}</h1>
+          <h1 class="card-title">24.2K</h1>
           <p class="card-text">Подробнее</p>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="card mb-3 bg-blueCard text-whiteText" style="width: 12rem; height: 12rem;">
         <div class="card-body d-flex flex-column justify-content-center">
           <h4 class="card-title">Онлайн</h4>
-          <h1 class="card-title">{{statistics.online | number }}</h1>
+          <h1 class="card-title">17.7K</h1>
           <p class="card-text">Подробнее</p>
         </div>
       </div>
@@ -34,7 +34,7 @@
       <div class="card mb-3 bg-blueCard text-whiteText" style="width: 12rem; height: 12rem;">
         <div class="card-body d-flex flex-column justify-content-center">
           <h4 class="card-title">Общие</h4>
-          <h1 class="card-title">{{statistics.totalSum | number }}</h1>
+          <h1 class="card-title">46.6K</h1>
           <p class="card-text">Подробнее</p>
         </div>
       </div>

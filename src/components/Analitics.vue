@@ -21,12 +21,6 @@
 
   </div>
 
-  <!-- Chart -->
-
-  <!-- <div class="w-100">
-    <canvas ref="canvas"></canvas>
-  </div> -->
-
   <bar-chart :chart-data="chartdata" :options="options" :width="200" :height="200" ></bar-chart>
 
   <!-- Button section -->
@@ -65,52 +59,6 @@ export default {
   },
   methods: {
     fillData (data) {
-      let orders = 0
-      let sale = 0
-      let online = 0
-      const nextProjects = []
-      const currentProjects = []
-      const doneProjects = []
-      // const monthlyOrders = []
-
-      const totalSum = data.sellsGlobal.reduce((total, project) => {
-        if (project.status === 'next') {
-          project.sells.map(sell => {
-            sell.type === 'orders' ? orders += sell.sold : sell.type === 'sale' ? sale += sell.sold : online += sell.sold
-            total += sell.sold
-            nextProjects.push({ month: sell.month, sold: sell.sold })
-          })
-        } if (project.status === 'current') {
-          project.sells.map(sell => {
-            sell.type === 'orders' ? orders += sell.sold : sell.type === 'sale' ? sale += sell.sold : online += sell.sold
-            total += sell.sold
-            currentProjects.push({ month: sell.month, sold: sell.sold })
-          })
-        } else {
-          project.sells.map(sell => {
-            sell.type === 'orders' ? orders += sell.sold : sell.type === 'sale' ? sale += sell.sold : online += sell.sold
-            total += sell.sold
-            doneProjects.push({ month: sell.month, sold: sell.sold })
-          })
-        }
-        return total
-      }, 0)
-
-      const payload = { orders, sale, online, totalSum }
-      this.$store.dispatch('dataForStatistic', payload)
-
-      const nextProjectsMonthly = []
-      for (let i = 1; i < 13; i++) {
-        const month = nextProjects.reduce((acc, element) => {
-          if (element.month === i) {
-            acc += element.sold
-          }
-          return acc
-        }, 0)
-        nextProjectsMonthly.push({ month: i, sold: month })
-      }
-      const goodDataForCartNext = nextProjectsMonthly.map(m => m.sold)
-
       this.chartdata = {
         labels: [
           'Янв',
@@ -127,7 +75,7 @@ export default {
           'Дек'],
         datasets: [{
           label: 'Предстоящие',
-          data: [...goodDataForCartNext],
+          data: [10, 5, 17, 12, 18, 10, 7, 10, 8, 14, 12, 1],
           barPercentage: 0.1,
           backgroundColor: [
             '#6672fa',
